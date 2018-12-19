@@ -1,0 +1,108 @@
+#ifndef __FLASH_H
+#define __FLASH_H
+
+#define USER_START_SECTOR	2
+#define	CPU_TYPE			2
+
+#define MAX_USER_SECTOR		16	// actually 17, but 17-th is a bootsector and cannot be written
+
+#define CCLK				60000		/* 60000 kHz for IAP call */
+
+// minimum writable flash area, in bytes
+#define FLASH_BUF_SIZE		512
+
+#define USER_FLASH_START	sector_start_map[USER_START_SECTOR]
+#define USER_FLASH_END		sector_end_map[MAX_USER_SECTOR]
+#define USER_FLASH_SIZE		((USER_FLASH_END - USER_FLASH_START) + 1)
+#define MAX_FLASH_SECTOR	32
+
+/* Define start address of each Flash sector */
+#define SECTOR_0_START      0x00000000
+#define SECTOR_1_START      0x00002000
+#define SECTOR_2_START      0x00004000
+#define SECTOR_3_START      0x00006000
+#define SECTOR_4_START      0x00008000
+#define SECTOR_5_START      0x0000A000
+#define SECTOR_6_START      0x0000C000
+#define SECTOR_7_START      0x0000E000
+#define SECTOR_8_START      0x00010000
+#define SECTOR_9_START      0x00020000
+#define SECTOR_10_START     0x00030000
+#define SECTOR_11_START     0x00032000
+#define SECTOR_12_START     0x00034000
+#define SECTOR_13_START     0x00036000
+#define SECTOR_14_START     0x00038000
+#define SECTOR_15_START     0x0003A000
+#define SECTOR_16_START     0x0003C000
+#define SECTOR_17_START     0xFFFFFFFF
+#define SECTOR_18_START     0xFFFFFFFF
+#define SECTOR_19_START     0xFFFFFFFF
+#define SECTOR_20_START     0xFFFFFFFF
+#define SECTOR_21_START     0xFFFFFFFF
+#define SECTOR_22_START     0xFFFFFFFF
+#define SECTOR_23_START     0xFFFFFFFF
+#define SECTOR_24_START     0xFFFFFFFF
+#define SECTOR_25_START     0xFFFFFFFF
+#define SECTOR_26_START     0xFFFFFFFF
+#define SECTOR_27_START     0xFFFFFFFF
+#define SECTOR_28_START     0xFFFFFFFF
+#define SECTOR_29_START     0xFFFFFFFF
+#define SECTOR_30_START     0xFFFFFFFF
+#define SECTOR_31_START     0xFFFFFFFF
+/* Define end address of each Flash sector */
+#define SECTOR_0_END        0x00001FFF
+#define SECTOR_1_END        0x00003FFF
+#define SECTOR_2_END        0x00005FFF
+#define SECTOR_3_END        0x00007FFF
+#define SECTOR_4_END        0x00009FFF
+#define SECTOR_5_END        0x0000BFFF
+#define SECTOR_6_END        0x0000DFFF
+#define SECTOR_7_END        0x0000FFFF
+#define SECTOR_8_END        0x0001FFFF
+#define SECTOR_9_END        0x0002FFFF
+#define SECTOR_10_END       0x00031FFF
+#define SECTOR_11_END       0x00033FFF
+#define SECTOR_12_END       0x00035FFF
+#define SECTOR_13_END       0x00037FFF
+#define SECTOR_14_END       0x00039FFF
+#define SECTOR_15_END       0x0003BFFF
+#define SECTOR_16_END       0x0003DFFF
+#define SECTOR_17_END       0xFFFFFFFF
+#define SECTOR_18_END       0xFFFFFFFF
+#define SECTOR_19_END       0xFFFFFFFF
+#define SECTOR_20_END       0xFFFFFFFF
+#define SECTOR_21_END       0xFFFFFFFF
+#define SECTOR_22_END       0xFFFFFFFF
+#define SECTOR_23_END       0xFFFFFFFF
+#define SECTOR_24_END       0xFFFFFFFF
+#define SECTOR_25_END       0xFFFFFFFF
+#define SECTOR_26_END       0xFFFFFFFF
+#define SECTOR_27_END       0xFFFFFFFF
+#define SECTOR_28_END       0xFFFFFFFF
+#define SECTOR_29_END       0xFFFFFFFF
+#define SECTOR_30_END       0xFFFFFFFF
+#define SECTOR_31_END       0xFFFFFFFF
+
+//----------------------------------------------------------------------------
+#define	IAP_ADDRESS	0x7FFFFFF1
+//----------------------------------------------------------------------------
+const unsigned int sector_start_map[MAX_FLASH_SECTOR] = {SECTOR_0_START,         \
+SECTOR_1_START,SECTOR_2_START,SECTOR_3_START,SECTOR_4_START,SECTOR_5_START,      \
+SECTOR_6_START,SECTOR_7_START,SECTOR_8_START,SECTOR_9_START,SECTOR_10_START,     \
+SECTOR_11_START,SECTOR_12_START,SECTOR_13_START,SECTOR_14_START,SECTOR_15_START, \
+SECTOR_16_START,SECTOR_17_START,SECTOR_18_START,SECTOR_19_START,SECTOR_20_START, \
+SECTOR_21_START,SECTOR_22_START,SECTOR_23_START,SECTOR_24_START,SECTOR_25_START, \
+SECTOR_26_START,SECTOR_27_START,SECTOR_28_START,SECTOR_29_START,SECTOR_30_START, \
+SECTOR_31_START};
+//----------------------------------------------------------------------------
+const unsigned int sector_end_map[MAX_FLASH_SECTOR] = {SECTOR_0_END,SECTOR_1_END,\
+SECTOR_2_END,SECTOR_3_END,SECTOR_4_END,SECTOR_5_END,SECTOR_6_END,SECTOR_7_END,   \
+SECTOR_8_END,SECTOR_9_END,SECTOR_10_END,SECTOR_11_END,SECTOR_12_END,             \
+SECTOR_13_END,SECTOR_14_END,SECTOR_15_END,SECTOR_16_END,SECTOR_17_END,           \
+SECTOR_18_END,SECTOR_19_END,SECTOR_20_END,SECTOR_21_END,SECTOR_22_END,           \
+SECTOR_23_END,SECTOR_24_END,SECTOR_25_END,SECTOR_26_END,                         \
+SECTOR_27_END,SECTOR_28_END,SECTOR_29_END,SECTOR_30_END,SECTOR_31_END};
+//----------------------------------------------------------------------------
+
+
+#endif

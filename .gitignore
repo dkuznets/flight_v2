@@ -1,0 +1,14 @@
+*.zip
+*.pdf
+*.rar
+*.txt
+*.html
+*.*~
+*.suo
+*.sdf
+*.obj
+*.bin
+Obj/
+Lst/
+Output/
+*.bak
