@@ -11,26 +11,26 @@ set day2=%DD:~0,-6%
 
 set /a c=0
 if "%2" EQU "L" (
-	for /f "UseBackQ Delims=" %%A IN ("vl.txt") do (
+	for /f "UseBackQ Delims=" %%A IN ("ver.txt") do (
 		set /a c+=1
 		if !c!==3 set year=%%A
 		if !c!==4 set month=%%A
 		if !c!==5 set day=%%A
 		if !c!==6 set build=%%A
-		set file="vl.txt"
-		set hfile="vl.h"
+		set file="ver.txt"
+		set hfile="ver.h"
 	)
 )
 
 if "%2" EQU "R" (	
-	for /f "UseBackQ Delims=" %%A IN ("vr.txt") do (
+	for /f "UseBackQ Delims=" %%A IN ("ver.txt") do (
 		set /a c+=1
 		if !c!==3 set year=%%A
 		if !c!==4 set month=%%A
 		if !c!==5 set day=%%A
 		if !c!==6 set build=%%A
-		set file="vr.txt"
-		set hfile="vr.h"
+		set file="ver.txt"
+		set hfile="ver.h"
 	)
 )
 

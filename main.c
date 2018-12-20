@@ -15,6 +15,8 @@
 #include "rtc_svc.h"
 #include "structs.h"
 #include "common.h"
+#include "ver.h"
+
 //----------------------------------------------------------------------------
 // pause needed for JTAG capturing at CPU startup
 #define	DEBUG_STARTUP_PAUSE()				\
