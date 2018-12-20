@@ -892,7 +892,7 @@ static void build_clusters_array1(void)
 			S16 x2 = (pcc2->rect.left + pcc2->rect.right) / 2;
  			S16 y2 = (pcc2->rect.top + pcc2->rect.bottom) / 2;
 
-			if(abs(x1 - x2) == CELL_SIZE && abs(y1 - y2) == CELL_SIZE)
+			if(abs(x1 - x2) <= CELL_SIZE && abs(y1 - y2) <= CELL_SIZE)
 			{
 				if(pcc2->marker == NO_MARKER)
 				{
@@ -999,7 +999,7 @@ static void build_clusters_array2(void)
 			S16 x2 = (pcc2->rect.left + pcc2->rect.right) / 2;
  			S16 y2 = (pcc2->rect.top + pcc2->rect.bottom) / 2;
 
-			if(abs(x1 - x2) == CELL_SIZE && abs(y1 - y2) == CELL_SIZE)
+			if(abs(x1 - x2) <= CELL_SIZE && abs(y1 - y2) <= CELL_SIZE)
 			{
 				if(pcc2->marker == NO_MARKER)
 				{
