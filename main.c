@@ -18,6 +18,8 @@
 #include "ver.h"
 
 //----------------------------------------------------------------------------
+#warning Fimware version ITYPE_IWING_IYEAR.IMON.IDAY build IVER
+//----------------------------------------------------------------------------
 // pause needed for JTAG capturing at CPU startup
 #define	DEBUG_STARTUP_PAUSE()				\
 {											\
