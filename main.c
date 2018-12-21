@@ -476,7 +476,11 @@ __task void task_CAN_Send(void)
 					msg.format				= STANDARD_FORMAT;
 					msg.type				= DATA_FRAME;
 
+/*
 					if(pop_coords_item(pcd))
+						CAN_safe_send(&msg, CAN_WR_TIMEOUT);
+*/
+					while(pop_coords_item(pcd))
 						CAN_safe_send(&msg, CAN_WR_TIMEOUT);
 				}
 				break;
