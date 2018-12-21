@@ -32,7 +32,7 @@ I (rtc_svc.h)(0x4E89E86A)
 I (structs.h)(0x4F910FCA)
 I (rect.h)(0x4E831038)
 I (common.h)(0x4C9D13FC)
-I (ver.h)(0x5C1CCFC9)
+I (ver.h)(0x5C1CD0D4)
 F (.\common.c)(0x4E929F10)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I d:\Keil_v473\ARM\RV31\INC-I d:\Keil_v473\ARM\CMSIS\Include-I d:\Keil_v473\ARM\Inc\Philips-o .\obj\common.o --omf_browse .\obj\common.crf --depend .\obj\common.d)
 I (d:\Keil_v473\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
 I (d:\Keil_v473\ARM\RV31\INC\RTL.H)(0x559D26C8)
