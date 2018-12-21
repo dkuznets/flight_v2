@@ -2,5 +2,5 @@
 #define IWING "R" 
 #define IYEAR 2018 
 #define IMON 12 
-#define IDAY 20 
-#define IVER 9 
+#define IDAY 21 
+#define IVER 1 
