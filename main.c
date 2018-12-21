@@ -149,6 +149,8 @@ static BIT  calculate_mass_centre_by_array2(float *px, float *py);
 static void calculate_angles(float x, float y, S16 *pangle1, S16 *pangle2);
 static void bad_pixels_dynamic_calibration(void);
 static U64  get_time_10us(void);
+static BIT  calculate_mass_centre_1(void);
+static BIT  calculate_mass_centre_2(void);
 //----------------------------------------------------------------------------
 // shot coordinates fifo helpers
 static BIT  push_coords_item(const COORDS_DATA *coords);
@@ -286,19 +288,22 @@ __task void task_Alarm(void)
 			{
 				enlarge_clusters_in_array2();
 				exclude_intersected_clusters_from_array1();
-				ok = calculate_mass_centre_by_array1(&x, &y);
+//				ok = calculate_mass_centre_by_array1(&x, &y);
+				ok = calculate_mass_centre_1();
 			}
 			else											// CMOS2 has captured a shot
 			{
 				enlarge_clusters_in_array1();
 				exclude_intersected_clusters_from_array2();
-				ok = calculate_mass_centre_by_array2(&x, &y);
+//				ok = calculate_mass_centre_by_array2(&x, &y);
+				ok = calculate_mass_centre_2();
 			}
 
 			if(ok)
 			{
 				// XY-coordinates have been successfully calculated,
 				// now calculate angles
+/*
 				calculate_angles(x, y, &angle1, &angle2);
 
 				coords.time = (U32)get_time_10us();
@@ -306,7 +311,7 @@ __task void task_Alarm(void)
 				coords.angle2 = angle2;
 
 				push_coords_item(&coords);
-
+*/
 				break;
 			}
 
@@ -1214,6 +1219,102 @@ static BIT calculate_mass_centre_by_array2(float *px, float *py)
 		return __TRUE;
 	}
 
+	return __FALSE;
+}
+
+//----------------------------------------------------------------------------
+static BIT calculate_mass_centre_1(void)
+{
+	U16 i, j, c = 0, cc = 0;
+	float fx = 0, fy = 0;
+	S16 angle1, angle2;
+	COORDS_DATA coords;
+
+	for(i = 0; i < g_super_cluster_count1; i++)
+	{
+		CLUSTER_COORD *pcc = &g_super_cluster_coords1[i];
+
+		if(pcc->excluded == __FALSE)
+		{
+			for(j = 0; j < g_shot_count1; j++)
+			{
+				U16 x = g_shot_array1[j].x;
+				U16 y = g_shot_array1[j].y;
+
+				if(x >= pcc->rect.left && x < pcc->rect.right &&
+					y >= pcc->rect.top && y < pcc->rect.bottom)
+				{
+					fx += x;
+					fy += y;
+					c++;
+				}
+			}
+			cc++;
+		}
+	}
+
+	if(c > 0 && cc > 0)
+	{
+		S16 _x = fx / (float)c;
+		S16 _y = fy / (float)c;
+		calculate_angles(_x, _y, &angle1, &angle2);
+		coords.time = (U32)get_time_10us();
+		coords.angle1 = angle1;
+		coords.angle2 = angle2;
+		push_coords_item(&coords);
+		c = 0;
+		fx = 0;
+		fy = 0;
+		return __TRUE;
+	}
+	return __FALSE;
+}
+
+//----------------------------------------------------------------------------
+static BIT calculate_mass_centre_2(void)
+{
+	U16 i, j, c = 0, cc = 0;
+	float fx = 0, fy = 0;
+	S16 angle1, angle2;
+	COORDS_DATA coords;
+
+	for(i = 0; i < g_super_cluster_count2; i++)
+	{
+		CLUSTER_COORD *pcc = &g_super_cluster_coords2[i];
+
+		if(pcc->excluded == __FALSE)
+		{
+			for(j = 0; j < g_shot_count2; j++)
+			{
+				U16 x = g_shot_array2[j].x;
+				U16 y = g_shot_array2[j].y;
+
+				if(x >= pcc->rect.left && x < pcc->rect.right &&
+					y >= pcc->rect.top && y < pcc->rect.bottom)
+				{
+					fx += x;
+					fy += y;
+					c++;
+				}
+			}
+			cc++;
+		}
+	}
+
+	if(c > 0 && cc > 0)
+	{
+		S16 _x = fx / (float)c;
+		S16 _y = fy / (float)c;
+		calculate_angles(_x, _y, &angle1, &angle2);
+		coords.time = (U32)get_time_10us();
+		coords.angle1 = angle1;
+		coords.angle2 = angle2;
+		push_coords_item(&coords);
+		c = 0;
+		fx = 0;
+		fy = 0;
+		return __TRUE;
+	}
 	return __FALSE;
 }
 
