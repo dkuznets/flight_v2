@@ -229,8 +229,8 @@ __task void task_Alarm(void)
 	COORDS_DATA coords;
 	U32         start_time = rtc_GetTickCount();
 	U32         cur_time;
-	S16         angle1, angle2;
-	float       x = 0, y = 0;
+//	S16         angle1, angle2;
+//	float       x = 0, y = 0;
 	BIT         ok;
 	BIT         second_pass_flag;
 
@@ -1144,7 +1144,7 @@ static void enlarge_clusters_in_array2(void)
 
 //----------------------------------------------------------------------------
 
-static BIT calculate_mass_centre_by_array1(float *px, float *py)
+static __weak BIT calculate_mass_centre_by_array1(float *px, float *py)
 {
 	U16 i, j, c = 0;
 	float fx = 0, fy = 0;
@@ -1184,7 +1184,7 @@ static BIT calculate_mass_centre_by_array1(float *px, float *py)
 
 //----------------------------------------------------------------------------
 
-static BIT calculate_mass_centre_by_array2(float *px, float *py)
+static __weak BIT calculate_mass_centre_by_array2(float *px, float *py)
 {
 	U16 i, j, c = 0;
 	float fx = 0, fy = 0;
