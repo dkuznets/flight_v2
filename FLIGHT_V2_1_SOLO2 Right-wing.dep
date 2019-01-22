@@ -11,7 +11,7 @@ I (d:\Keil_v473\ARM\RV31\INC\RTL.h)(0x559D26C8)
 I (d:\Keil_v473\ARM\ARMCC\include\stdio.h)(0x51C7FD94)
 I (d:\Keil_v473\ARM\ARMCC\include\absacc.h)(0x51C7FD94)
 I (FS\FS_SPI_FlashDev.h)(0x4D08D35A)
-F (.\main.c)(0x5C207C01)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I d:\Keil_v473\ARM\RV31\INC-I d:\Keil_v473\ARM\CMSIS\Include-I d:\Keil_v473\ARM\Inc\Philips-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
+F (.\main.c)(0x5C207C25)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I d:\Keil_v473\ARM\RV31\INC-I d:\Keil_v473\ARM\CMSIS\Include-I d:\Keil_v473\ARM\Inc\Philips-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
 I (d:\Keil_v473\ARM\Inc\Philips\LPC22xx.h)(0x559D2158)
 I (d:\Keil_v473\ARM\RV31\INC\RTL.h)(0x559D26C8)
 I (d:\Keil_v473\ARM\ARMCC\include\STDLIB.h)(0x51C7FD94)
@@ -32,7 +32,7 @@ I (rtc_svc.h)(0x4E89E86A)
 I (structs.h)(0x4F910FCA)
 I (rect.h)(0x4E831038)
 I (common.h)(0x4C9D13FC)
-I (ver.h)(0x5C207C03)
+I (ver.h)(0x5C207C27)
 F (.\common.c)(0x4E929F10)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I d:\Keil_v473\ARM\RV31\INC-I d:\Keil_v473\ARM\CMSIS\Include-I d:\Keil_v473\ARM\Inc\Philips-o .\obj\common.o --omf_browse .\obj\common.crf --depend .\obj\common.d)
 I (d:\Keil_v473\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
 I (d:\Keil_v473\ARM\RV31\INC\RTL.H)(0x559D26C8)
