@@ -1,6 +1,6 @@
 #define ITYPE "FL" 
-#define IWING "R" 
+#define IWING "U" 
 #define IYEAR 2019 
 #define IMON 1 
 #define IDAY 24 
-#define IVER 15 
+#define IVER 16 
