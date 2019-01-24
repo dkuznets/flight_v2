@@ -271,6 +271,13 @@ __task void task_Init(void)
 	os_tsk_create(task_StatusMonitor, 1);
 	os_tsk_create(task_Alarm, 1);
 
+////////////
+//			g_status_params = *psp;
+			g_status.reserved[0] = tmp_DEV_ID;
+			g_status.reserved[1] = CAN_DEV_ID;
+			os_evt_set(EVT_SEND_STATUS_BY_REQUEST, g_task_id);
+////////////
+	
 	os_tsk_delete_self();
 }
 
