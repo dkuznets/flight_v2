@@ -16,6 +16,7 @@
 #include "structs.h"
 #include "common.h"
 #include "ver.h"
+#include "flash.h"
 
 //----------------------------------------------------------------------------
 //----------------------------------------------------------------------------
@@ -29,29 +30,51 @@
 #define	M_PI								3.14159265358979323846
 //----------------------------------------------------------------------------
 // CAN device ID
+#define	RIGHT_WING_DEV_ID					0x11	
+#define	LEFT_WING_DEV_ID					0x12
+
+
 #ifdef	THIS_DEVICE_IS_LEFT
-#define	CAN_DEV_ID							0x11	// SOLO device ID for left wing
+	#define	OLO_DEV_ID						0x12	// SOLO device ID for left wing
 #else
-#define	CAN_DEV_ID							0x12	// SOLO device ID for right wing
+	#define	OLO_DEV_ID						0x11	// SOLO device ID for right wing
 #endif
+
+#define DEV_ID_FILE_ADDRESS					sector_start_map[MAX_USER_SECTOR]
+static U8 CAN_DEV_ID = OLO_DEV_ID;
+
 // CAN individual message IDs (input for ARM)
-#define	CAN_MSG_ID_IN_RESET					((0x01 << 5) | CAN_DEV_ID)
-#define	CAN_MSG_ID_IN_CLOCK_SYNC			((0x02 << 5) | CAN_DEV_ID)
-#define	CAN_MSG_ID_IN_GET_STATUS			((0x04 << 5) | CAN_DEV_ID)
-#define	CAN_MSG_ID_IN_SOER_MODE				((0x07 << 5) | CAN_DEV_ID)
-// CAN broadcast message IDs (input for ARM)
-#define	CAN_MSG_ID_IN_BROADCAST_RESET		((0x01 << 5) | 0x00)
-#define	CAN_MSG_ID_IN_BROADCAST_CLOCK_SYNC	((0x02 << 5) | 0x00)
-#define	CAN_MSG_ID_IN_BROADCAST_GET_STATUS	((0x04 << 5) | 0x00)
-#define	CAN_MSG_ID_IN_BROADCAST_SOER_MODE	((0x07 << 5) | 0x00)
+U16	CAN_MSG_ID_IN_RESET;
+U16	CAN_MSG_ID_IN_GET_STATUS;
+U16 CAN_MSG_ID_IN_SOER_MODE;
+U16	CAN_MSG_ID_IN_MODULE_MODE;
+U16	CAN_MSG_ID_IN_PROGRAMM_MODE;
+
 // CAN message IDs (output for ARM)
-#define	CAN_MSG_ID_OUT_STATUS				((0x05 << 5) | CAN_DEV_ID)
-#define	CAN_MSG_ID_OUT_COORDS				((0x2D << 5) | CAN_DEV_ID)
+U16	CAN_MSG_ID_OUT_STATUS;
+U16	CAN_MSG_ID_OUT_COORDS;
+
+
+// CAN individual message IDs (input for ARM)
+//#define	CAN_MSG_ID_IN_GET_STATUS			((0x04 << 5) | CAN_DEV_ID)
+//#define	CAN_MSG_ID_IN_SOER_MODE				((0x07 << 5) | CAN_DEV_ID)
+
+// CAN broadcast message IDs (input for ARM)
+//#define	CAN_MSG_ID_IN_BROADCAST_RESET		((0x01 << 5) | 0x00)
+//#define	CAN_MSG_ID_IN_BROADCAST_CLOCK_SYNC	((0x02 << 5) | 0x00)
+//#define	CAN_MSG_ID_IN_BROADCAST_GET_STATUS	((0x04 << 5) | 0x00)
+//#define	CAN_MSG_ID_IN_BROADCAST_SOER_MODE	((0x07 << 5) | 0x00)
+
+// CAN message IDs (output for ARM)
+//#define	CAN_MSG_ID_OUT_STATUS				((0x05 << 5) | CAN_DEV_ID)
+//#define	CAN_MSG_ID_OUT_COORDS				((0x2D << 5) | CAN_DEV_ID)
+
 // CAN controller definitions
 #define	CAN_CTRL							1		// CAN1 controller
 #define	CAN_RD_TIMEOUT						100		// 1 sec CAN R/W timeout
 #define	CAN_WR_TIMEOUT						10		// 0.1 sec CAN R/W timeout
 #define	CAN_BAUDRATE						500000	// 500 kbps CAN bitrate
+
 // inter-task event codes
 #define	EVT_SEND_STATUS_BY_REQUEST			0x0001
 #define	EVT_SEND_STATUS_BY_TIMER			0x0002
@@ -181,6 +204,28 @@ __task void task_Init(void)
 {
 	BIT ok1 = __FALSE;
 	BIT ok2;
+	static U8 *pdata8;
+
+	CAN_DEV_ID = RIGHT_WING_DEV_ID;
+	pdata8 =(U8 *)DEV_ID_FILE_ADDRESS;
+
+	if(pdata8[1] == pdata8[2])	CAN_DEV_ID = pdata8[1];
+	if(pdata8[1] == pdata8[3])	CAN_DEV_ID = pdata8[1];
+	if(pdata8[2] == pdata8[3])	CAN_DEV_ID = pdata8[2];
+
+	if(CAN_DEV_ID != LEFT_WING_DEV_ID)
+		CAN_DEV_ID = RIGHT_WING_DEV_ID;
+		
+
+	CAN_MSG_ID_IN_RESET =			((0x01 << 5) | CAN_DEV_ID);
+	CAN_MSG_ID_IN_GET_STATUS =		((0x04 << 5) | CAN_DEV_ID);
+	CAN_MSG_ID_IN_MODULE_MODE = 	((0x06 << 5) | CAN_DEV_ID);
+	CAN_MSG_ID_IN_SOER_MODE = 		((0x07 << 5) | CAN_DEV_ID);
+	CAN_MSG_ID_IN_PROGRAMM_MODE =	((0x03 << 5) | CAN_DEV_ID);
+
+	// CAN message IDs (output for ARM)
+	CAN_MSG_ID_OUT_STATUS =			((0x05 << 5) | CAN_DEV_ID);
+	CAN_MSG_ID_OUT_COORDS = 		((0x2D << 5) | CAN_DEV_ID);
 
 	// initialize & upload PLIS
 	if(plis_Init())
@@ -333,63 +378,41 @@ __task void task_CAN_Receive(void)
 {
 	CAN_msg msg;
 	STATUS_PARAMS *psp = (STATUS_PARAMS *)msg.data;
-	TIME_SYNC_DATA *ptsd = (TIME_SYNC_DATA *)msg.data;
 
 	while(1)
 	{
 		if(!CAN_safe_receive(&msg, CAN_RD_TIMEOUT))
 			continue;
 
-		switch(msg.id)
+		
+		if(msg.id == CAN_MSG_ID_IN_RESET || msg.id == CAN_MSG_ID_IN_PROGRAMM_MODE)
 		{
-			case CAN_MSG_ID_IN_BROADCAST_RESET:
-			case CAN_MSG_ID_IN_RESET:
-				{
-					disable_interrupts();
+			disable_interrupts();
 
-					// initiate RESET using watchdog
-					WDTC	= 0xFF;					// smallest available counter value
-					WDMOD	= 0x03;					// ENABLE + RESET
-					WDFEED	= 0xAA;					// send 1-st feed sequence...
-					WDFEED	= 0x55;					// ...
-					while(1);						// and wait for soon RESET
-				}
+			// initiate RESET using watchdog
+			WDTC	= 0xFF;					// smallest available counter value
+			WDMOD	= 0x03;					// ENABLE + RESET
+			WDFEED	= 0xAA;					// send 1-st feed sequence...
+			WDFEED	= 0x55;					// ...
+			while(1);						// and wait for soon RESET
+		}
 
-			case CAN_MSG_ID_IN_BROADCAST_CLOCK_SYNC:
-			case CAN_MSG_ID_IN_CLOCK_SYNC:
-				{
-					ENTER_CRITICAL_SECTION();
-					g_init_time_10us = ptsd->time_10us;
-					LEAVE_CRITICAL_SECTION();
-				}
-				break;
+		if(msg.id == CAN_MSG_ID_IN_GET_STATUS)
+		{
+			// update global variable
+			ENTER_CRITICAL_SECTION();
+			g_status_params = *psp;
+			LEAVE_CRITICAL_SECTION();
 
-			case CAN_MSG_ID_IN_BROADCAST_GET_STATUS:
-			case CAN_MSG_ID_IN_GET_STATUS:
-				{
-					// update global variable
-					ENTER_CRITICAL_SECTION();
-					g_status_params = *psp;
-					LEAVE_CRITICAL_SECTION();
-
-					if(psp->use_frequency == 0)
-						os_evt_set(EVT_SEND_STATUS_BY_REQUEST, g_task_id);
-				}
-				break;
-
-			case CAN_MSG_ID_IN_BROADCAST_SOER_MODE:
-			case CAN_MSG_ID_IN_SOER_MODE:
-				{
-					// update global variable
-					ENTER_CRITICAL_SECTION();
-					g_status.soer_mode = msg.data[0];
-					LEAVE_CRITICAL_SECTION();
-				}
-				break;
-
-			default:
-				// ignore unknown input IDs
-				break;
+			if(psp->use_frequency == 0)
+				os_evt_set(EVT_SEND_STATUS_BY_REQUEST, g_task_id);
+		}
+		if(msg.id == CAN_MSG_ID_IN_SOER_MODE)
+		{
+			// update global variable
+			ENTER_CRITICAL_SECTION();
+			g_status.soer_mode = msg.data[0];
+			LEAVE_CRITICAL_SECTION();
 		}
 	}
 }
@@ -1534,22 +1557,17 @@ static CAN_ERROR CAN_init_controller(void)
 	if((err = CAN_init(CAN_CTRL, CAN_BAUDRATE)) != CAN_OK)
 		return err;
 
-	// store acceptance filter with broadcast IDs
-	if((err = CAN_rx_object(CAN_CTRL, 0, CAN_MSG_ID_IN_BROADCAST_RESET     , STANDARD_FORMAT)) != CAN_OK)
-		return err;
-	if((err = CAN_rx_object(CAN_CTRL, 0, CAN_MSG_ID_IN_BROADCAST_CLOCK_SYNC, STANDARD_FORMAT)) != CAN_OK)
-		return err;
-	if((err = CAN_rx_object(CAN_CTRL, 0, CAN_MSG_ID_IN_BROADCAST_GET_STATUS, STANDARD_FORMAT)) != CAN_OK)
-		return err;
-
 	// store acceptance filter with individual IDs
 	if((err = CAN_rx_object(CAN_CTRL, 0, CAN_MSG_ID_IN_RESET               , STANDARD_FORMAT)) != CAN_OK)
 		return err;
-	if((err = CAN_rx_object(CAN_CTRL, 0, CAN_MSG_ID_IN_CLOCK_SYNC          , STANDARD_FORMAT)) != CAN_OK)
-		return err;
 	if((err = CAN_rx_object(CAN_CTRL, 0, CAN_MSG_ID_IN_GET_STATUS          , STANDARD_FORMAT)) != CAN_OK)
 		return err;
-
+	if((err = CAN_rx_object(CAN_CTRL, 0, CAN_MSG_ID_IN_MODULE_MODE         , STANDARD_FORMAT)) != CAN_OK)
+		return err;
+	if((err = CAN_rx_object(CAN_CTRL, 0, CAN_MSG_ID_IN_SOER_MODE           , STANDARD_FORMAT)) != CAN_OK)
+		return err;
+	if((err = CAN_rx_object(CAN_CTRL, 0, CAN_MSG_ID_IN_PROGRAMM_MODE       , STANDARD_FORMAT)) != CAN_OK)
+		return err;
 	return CAN_start(CAN_CTRL);
 }
 
