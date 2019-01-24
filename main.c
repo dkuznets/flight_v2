@@ -42,6 +42,7 @@
 
 #define DEV_ID_FILE_ADDRESS					sector_start_map[MAX_USER_SECTOR]
 static U8 CAN_DEV_ID = OLO_DEV_ID;
+static U8 tmp_DEV_ID;
 
 // CAN individual message IDs (input for ARM)
 U16	CAN_MSG_ID_IN_RESET;
@@ -205,7 +206,6 @@ __task void task_Init(void)
 	BIT ok1 = __FALSE;
 	BIT ok2;
 	static U8 *pdata8;
-	static U8 tmp_DEV_ID;
 
 //	CAN_DEV_ID = OLO_DEV_ID;
 	pdata8 =(U8 *)DEV_ID_FILE_ADDRESS;
@@ -273,9 +273,7 @@ __task void task_Init(void)
 
 ////////////
 //			g_status_params = *psp;
-			g_status.reserved[0] = tmp_DEV_ID;
-			g_status.reserved[1] = CAN_DEV_ID;
-			os_evt_set(EVT_SEND_STATUS_BY_REQUEST, g_task_id);
+//			os_evt_set(EVT_SEND_STATUS_BY_REQUEST, g_task_id);
 ////////////
 	
 	os_tsk_delete_self();
@@ -464,6 +462,8 @@ __task void task_CAN_Send(void)
 					msg.type				= DATA_FRAME;
 					// copy status from global variable
 					ENTER_CRITICAL_SECTION();
+					g_status.reserved[0] = tmp_DEV_ID;
+					g_status.reserved[1] = CAN_DEV_ID;
 					*psd					= g_status;
 					LEAVE_CRITICAL_SECTION();
 					// update status transmittion reason
