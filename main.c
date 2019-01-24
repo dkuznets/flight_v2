@@ -205,18 +205,29 @@ __task void task_Init(void)
 	BIT ok1 = __FALSE;
 	BIT ok2;
 	static U8 *pdata8;
+	static U8 tmp_DEV_ID;
 
-	CAN_DEV_ID = RIGHT_WING_DEV_ID;
+//	CAN_DEV_ID = OLO_DEV_ID;
 	pdata8 =(U8 *)DEV_ID_FILE_ADDRESS;
 
-	if(pdata8[1] == pdata8[2])	CAN_DEV_ID = pdata8[1];
-	if(pdata8[1] == pdata8[3])	CAN_DEV_ID = pdata8[1];
-	if(pdata8[2] == pdata8[3])	CAN_DEV_ID = pdata8[2];
+	
+	if(pdata8[1] == pdata8[2])	tmp_DEV_ID = pdata8[1];
+	if(pdata8[1] == pdata8[3])	tmp_DEV_ID = pdata8[1];
+	if(pdata8[2] == pdata8[3])	tmp_DEV_ID = pdata8[2];
 
-	if(CAN_DEV_ID != LEFT_WING_DEV_ID)
-		CAN_DEV_ID = RIGHT_WING_DEV_ID;
-		
-
+	switch(tmp_DEV_ID)
+	{
+		case LEFT_WING_DEV_ID:
+			CAN_DEV_ID = LEFT_WING_DEV_ID;
+			break;
+		case RIGHT_WING_DEV_ID:
+			CAN_DEV_ID = RIGHT_WING_DEV_ID;
+			break;
+		default:
+			CAN_DEV_ID = OLO_DEV_ID;
+			break;
+	}
+	
 	CAN_MSG_ID_IN_RESET =			((0x01 << 5) | CAN_DEV_ID);
 	CAN_MSG_ID_IN_GET_STATUS =		((0x04 << 5) | CAN_DEV_ID);
 	CAN_MSG_ID_IN_MODULE_MODE = 	((0x06 << 5) | CAN_DEV_ID);
