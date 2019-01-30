@@ -40,7 +40,7 @@
 	#define	OLO_DEV_ID						0x11	// SOLO device ID for right wing
 #endif
 
-#define DEV_ID_FILE_ADDRESS					sector_start_map[MAX_USER_SECTOR]
+#define DEV_ID_FILE_ADDRESS					sector_start_map[MAX_USER_SECTOR - 1]
 static U8 CAN_DEV_ID = OLO_DEV_ID;
 static U8 tmp_DEV_ID;
 
