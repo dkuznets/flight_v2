@@ -422,3 +422,5 @@ Output/
 *.bak
 
 *.uvgui.*
+/FLIGHT_V2_1.uvgui.dkuznets
+/ver.h
