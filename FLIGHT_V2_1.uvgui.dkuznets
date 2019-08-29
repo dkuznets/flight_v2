@@ -1354,9 +1354,15 @@
       <ActiveTab>0</ActiveTab>
       <Doc>
         <Name>.\main.c</Name>
+<<<<<<< HEAD
         <ColumnNumber>68</ColumnNumber>
         <TopLine>38</TopLine>
         <CurrentLine>67</CurrentLine>
+=======
+        <ColumnNumber>78</ColumnNumber>
+        <TopLine>473</TopLine>
+        <CurrentLine>1472</CurrentLine>
+>>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
         <Folding>1</Folding>
         <ContractedFolders>193,205,389,437,542,594,630,659,686,713,742,769,796,843,895,1003,1110,1130,1150,1167,1184,1224,1311,1360,1395,1434,1474,1487,1500,1544,1566,1590</ContractedFolders>
         <PaneID>0</PaneID>
