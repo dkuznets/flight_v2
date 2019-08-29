@@ -421,7 +421,3 @@ Lst/
 Output/
 *.bak
 
-ver.h
-*.uvopt
-*.uvgui.*
-*.uvgui
