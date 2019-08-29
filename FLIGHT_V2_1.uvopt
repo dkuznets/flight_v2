@@ -741,11 +741,7 @@
       <FileNumber>1</FileNumber>
       <FileType>2</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -761,11 +757,7 @@
       <FileNumber>2</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -781,11 +773,7 @@
       <FileNumber>3</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -801,11 +789,7 @@
       <FileNumber>4</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -829,19 +813,11 @@
       <FileNumber>5</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-      <ColumnNumber>68</ColumnNumber>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>38</TopLine>
-      <CurrentLine>67</CurrentLine>
-=======
       <Focus>1</Focus>
-      <ColumnNumber>78</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>473</TopLine>
-      <CurrentLine>1472</CurrentLine>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
+      <CurrentLine>1565</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -853,11 +829,7 @@
       <FileNumber>6</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -881,11 +853,7 @@
       <FileNumber>7</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -901,11 +869,7 @@
       <FileNumber>8</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -921,11 +885,7 @@
       <FileNumber>9</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -941,11 +901,7 @@
       <FileNumber>10</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -969,11 +925,7 @@
       <FileNumber>11</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -989,11 +941,7 @@
       <FileNumber>12</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -1009,11 +957,7 @@
       <FileNumber>13</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -1037,11 +981,7 @@
       <FileNumber>14</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -1057,19 +997,11 @@
       <FileNumber>15</FileNumber>
       <FileType>1</FileType>
       <tvExp>1</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-      <ColumnNumber>1445148</ColumnNumber>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
-=======
       <Focus>1</Focus>
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
       <CurrentLine>5</CurrentLine>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <bDave2>0</bDave2>
       <PathWithFileName>.\termostat.c</PathWithFileName>
       <FilenameWithoutPath>termostat.c</FilenameWithoutPath>
@@ -1081,11 +1013,7 @@
       <FileNumber>16</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -1101,11 +1029,7 @@
       <FileNumber>17</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -1121,11 +1045,7 @@
       <FileNumber>18</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -1141,11 +1061,7 @@
       <FileNumber>19</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -1169,11 +1085,7 @@
       <FileNumber>20</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -1189,11 +1101,7 @@
       <FileNumber>21</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -1217,11 +1125,7 @@
       <FileNumber>22</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -1237,11 +1141,7 @@
       <FileNumber>23</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -1257,11 +1157,7 @@
       <FileNumber>24</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
@@ -1285,11 +1181,7 @@
       <FileNumber>25</FileNumber>
       <FileType>4</FileType>
       <tvExp>0</tvExp>
-<<<<<<< HEAD
-      <Focus>0</Focus>
-=======
       <Focus>1</Focus>
->>>>>>> 3c64789ededc033124d1e527b6883a4ba6ef9d92
       <ColumnNumber>1445148</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>0</TopLine>
