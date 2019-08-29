@@ -36,13 +36,15 @@ echo Converting file "firmware.afx" to "%newFN%.bin"
 echo.
 d:\Keil_v473\ARM\ARMCC\bin\fromelf.exe --output "..\..\FW\%newFN%.bin" --bin "Output\firmware.axf"
 echo Converting file Done!
+if "%2" EQU "nocs" goto nocs
 echo --------------------------------------------------------------------------------
 echo Converting file "%newFN%.bin"to "%1.cs"...
 echo.
-"..\..\utils\bin2cs.exe" "..\..\FW\%newFN%.bin" "flight_u_222" "d:\work\OLO\ex\OLO_CAN"
+"..\..\utils\bin2cs.exe" "..\..\FW\%newFN%.bin" %1 "d:\work\OLO\ex\OLO_CAN"
 echo.
 echo Converting file Done!
 echo --------------------------------------------------------------------------------
+:nocs
 if NOT ERRORLEVEL 0 goto err3
 goto exit
 
