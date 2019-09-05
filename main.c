@@ -99,7 +99,8 @@ U16	CAN_MSG_ID_OUT_COORDS;
 #define	THERMOSTAT_T						-20.0	// in Celsius degree
 #define	THERMOSTAT_DT						5.0		// (+-) in Celsius degree
 //----------------------------------------------------------------------------
-#define	COORDS_FIFO_SIZE					64		// maximum number of items in coordinates FIFO array
+//#define	COORDS_FIFO_SIZE					64		// maximum number of items in coordinates FIFO array
+#define	COORDS_FIFO_SIZE					16		// maximum number of items in coordinates FIFO array
 //----------------------------------------------------------------------------
 #define	ENTER_CRITICAL_SECTION()			os_mut_wait(g_mutex, 0xffff)
 #define	LEAVE_CRITICAL_SECTION()			os_mut_release(g_mutex)
@@ -309,6 +310,12 @@ __task void task_Alarm(void)
 				// enough empty space in stack?
 				if((COORDS_FIFO_SIZE - get_coords_count()) >= 2)
 				{
+					push_coords_item(&coords);
+					os_evt_set(EVT_SEND_ALARM, g_task_id);
+				}
+				else
+				{
+					g_coords_index = 0;
 					push_coords_item(&coords);
 					os_evt_set(EVT_SEND_ALARM, g_task_id);
 				}

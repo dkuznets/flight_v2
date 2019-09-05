@@ -2300,8 +2300,8 @@
           <AfterMake>
             <RunUserProg1>0</RunUserProg1>
             <RunUserProg2>1</RunUserProg2>
-            <UserProg1Name>m5.bat FLIGHT_U_2_2_4</UserProg1Name>
-            <UserProg2Name>d:\work\utils\keil_afterbuild.exe FLIGHT_U_2_2_4 /zip /git /conv /cs /push</UserProg2Name>
+            <UserProg1Name>m5.bat FLIGHT_U_2_2_5</UserProg1Name>
+            <UserProg2Name>d:\work\utils\keil_afterbuild.exe FLIGHT_U_2_2_5 /zip /git /conv /push</UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
           </AfterMake>
