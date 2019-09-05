@@ -99,8 +99,8 @@ U16	CAN_MSG_ID_OUT_COORDS;
 #define	THERMOSTAT_T						-20.0	// in Celsius degree
 #define	THERMOSTAT_DT						5.0		// (+-) in Celsius degree
 //----------------------------------------------------------------------------
-//#define	COORDS_FIFO_SIZE					64		// maximum number of items in coordinates FIFO array
-#define	COORDS_FIFO_SIZE					16		// maximum number of items in coordinates FIFO array
+#define	COORDS_FIFO_SIZE					64		// maximum number of items in coordinates FIFO array
+//#define	COORDS_FIFO_SIZE					16		// maximum number of items in coordinates FIFO array
 //----------------------------------------------------------------------------
 #define	ENTER_CRITICAL_SECTION()			os_mut_wait(g_mutex, 0xffff)
 #define	LEAVE_CRITICAL_SECTION()			os_mut_release(g_mutex)
