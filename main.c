@@ -100,6 +100,7 @@ U16	CAN_MSG_ID_OUT_COORDS;
 #define	THERMOSTAT_DT						5.0		// (+-) in Celsius degree
 //----------------------------------------------------------------------------
 #define	COORDS_FIFO_SIZE					64		// maximum number of items in coordinates FIFO array
+//#define	COORDS_FIFO_SIZE					16		// maximum number of items in coordinates FIFO array
 //----------------------------------------------------------------------------
 #define	ENTER_CRITICAL_SECTION()			os_mut_wait(g_mutex, 0xffff)
 #define	LEAVE_CRITICAL_SECTION()			os_mut_release(g_mutex)
@@ -312,6 +313,12 @@ __task void task_Alarm(void)
 					push_coords_item(&coords);
 					os_evt_set(EVT_SEND_ALARM, g_task_id);
 				}
+				else
+				{
+					g_coords_index = 0;
+					push_coords_item(&coords);
+					os_evt_set(EVT_SEND_ALARM, g_task_id);
+				}
 			}
 
 			cur_time = rtc_GetTickCount();
@@ -446,6 +453,7 @@ __task void task_CAN_Send(void)
 		os_evt_wait_or(0xffff, 0xffff);
 		evt = os_evt_get();
 
+/*
 		switch(evt)
 		{
 			case EVT_SEND_STATUS_BY_REQUEST:
@@ -518,10 +526,10 @@ __task void task_CAN_Send(void)
 					msg.format				= STANDARD_FORMAT;
 					msg.type				= DATA_FRAME;
 
-/*
-					if(pop_coords_item(pcd))
-						CAN_safe_send(&msg, CAN_WR_TIMEOUT);
-*/
+
+//					if(pop_coords_item(pcd))
+//						CAN_safe_send(&msg, CAN_WR_TIMEOUT);
+
 					while(pop_coords_item(pcd))
 						CAN_safe_send(&msg, CAN_WR_TIMEOUT);
 				}
@@ -530,6 +538,81 @@ __task void task_CAN_Send(void)
 			default:
 				// ignore unknown events
 				break;
+		}
+*/
+		if(evt & EVT_SEND_STATUS_BY_REQUEST)
+		{
+			memset(&msg, 0, sizeof(msg));
+			msg.id					= CAN_MSG_ID_OUT_STATUS;
+			msg.len					= sizeof(STATUS_DATA);
+			msg.ch					= 0;	// channel not used
+			msg.format				= STANDARD_FORMAT;
+			msg.type				= DATA_FRAME;
+			// copy status from global variable
+			ENTER_CRITICAL_SECTION();
+			g_status.reserved[0] = tmp_DEV_ID;
+			g_status.reserved[1] = CAN_DEV_ID;
+			*psd					= g_status;
+			LEAVE_CRITICAL_SECTION();
+			// update status transmittion reason
+			psd->bits1.reason		= REASON_BY_REQUEST;
+			// Fix error
+			psd->bits1.mode = MODE_OPERATIONAL;
+			CAN_safe_send(&msg, CAN_WR_TIMEOUT);
+		}
+
+		if(evt & EVT_SEND_STATUS_BY_TIMER)
+		{
+			memset(&msg, 0, sizeof(msg));
+			msg.id					= CAN_MSG_ID_OUT_STATUS;
+			msg.len					= sizeof(STATUS_DATA);
+			msg.ch					= 0;	// channel not used
+			msg.format				= STANDARD_FORMAT;
+			msg.type				= DATA_FRAME;
+			// copy status from global variable
+			ENTER_CRITICAL_SECTION();
+			*psd					= g_status;
+			LEAVE_CRITICAL_SECTION();
+			// update status transmittion reason
+			psd->bits1.reason		= REASON_BY_TIMER;
+			// Fix error
+			psd->bits1.mode = MODE_OPERATIONAL;
+			CAN_safe_send(&msg, CAN_WR_TIMEOUT);
+		}
+
+		if(evt & EVT_SEND_STATUS_BY_STATE)
+		{
+			memset(&msg, 0, sizeof(msg));
+			msg.id					= CAN_MSG_ID_OUT_STATUS;
+			msg.len					= sizeof(STATUS_DATA);
+			msg.ch					= 0;	// channel not used
+			msg.format				= STANDARD_FORMAT;
+			msg.type				= DATA_FRAME;
+			// copy status from global variable
+			ENTER_CRITICAL_SECTION();
+			*psd					= g_status;
+			LEAVE_CRITICAL_SECTION();
+			// update status transmittion reason
+			psd->bits1.reason		= REASON_BY_STATE;
+
+			CAN_safe_send(&msg, CAN_WR_TIMEOUT);
+		}
+
+		if(evt & EVT_SEND_ALARM)
+		{
+			memset(&msg, 0, sizeof(msg));
+			msg.id					= CAN_MSG_ID_OUT_COORDS;
+			msg.len					= sizeof(COORDS_DATA);
+			msg.ch					= 0;	// channel not used
+			msg.format				= STANDARD_FORMAT;
+			msg.type				= DATA_FRAME;
+
+/*
+			if(pop_coords_item(pcd))
+				CAN_safe_send(&msg, CAN_WR_TIMEOUT);
+*/
+			while(pop_coords_item(pcd))
+				CAN_safe_send(&msg, CAN_WR_TIMEOUT);
 		}
 	}
 }
