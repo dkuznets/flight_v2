@@ -103,6 +103,7 @@
         <tRmem>1</tRmem>
         <tRfunc>0</tRfunc>
         <tRbox>1</tRbox>
+        <tRtrace>0</tRtrace>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
         <nTsel>6</nTsel>
@@ -130,6 +131,10 @@
           <Name>UL2ARM(-U40296420 -O7 -C0 -FO7 -FD40000000 -FC800 -FN1 -FF0LPC_IAP_256 -FS00 -FL01E000)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
+      <Breakpoint/>
+      <Tracepoint>
+        <THDelay>0</THDelay>
+      </Tracepoint>
       <DebugFlag>
         <trace>0</trace>
         <periodic>0</periodic>
@@ -244,6 +249,7 @@
         <tRmem>1</tRmem>
         <tRfunc>0</tRfunc>
         <tRbox>1</tRbox>
+        <tRtrace>0</tRtrace>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
         <nTsel>6</nTsel>
@@ -266,6 +272,10 @@
           <Name>UL2ARM(-U40296420 -O7 -C0 -FO7 -FD40000000 -FC800 -FN1 -FF0LPC_IAP_256 -FS00 -FL01E000)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
+      <Breakpoint/>
+      <Tracepoint>
+        <THDelay>0</THDelay>
+      </Tracepoint>
       <DebugFlag>
         <trace>0</trace>
         <periodic>0</periodic>
@@ -380,6 +390,7 @@
         <tRmem>1</tRmem>
         <tRfunc>0</tRfunc>
         <tRbox>1</tRbox>
+        <tRtrace>0</tRtrace>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
         <nTsel>0</nTsel>
@@ -402,6 +413,10 @@
           <Name>UL2ARM(-U40296420 -O7 -C0 -FO7 -FD40000000 -FC800 -FN1 -FF0LPC_IAP_256 -FS00 -FL01E000)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
+      <Breakpoint/>
+      <Tracepoint>
+        <THDelay>0</THDelay>
+      </Tracepoint>
       <DebugFlag>
         <trace>0</trace>
         <periodic>0</periodic>
@@ -516,6 +531,7 @@
         <tRmem>1</tRmem>
         <tRfunc>0</tRfunc>
         <tRbox>1</tRbox>
+        <tRtrace>0</tRtrace>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
         <nTsel>0</nTsel>
@@ -538,6 +554,10 @@
           <Name>UL2ARM(-U40296420 -O7 -C0 -FO7 -FD40000000 -FC800 -FN1 -FF0LPC_IAP_256 -FS00 -FL01E000)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
+      <Breakpoint/>
+      <Tracepoint>
+        <THDelay>0</THDelay>
+      </Tracepoint>
       <DebugFlag>
         <trace>0</trace>
         <periodic>0</periodic>
@@ -652,6 +672,7 @@
         <tRmem>1</tRmem>
         <tRfunc>0</tRfunc>
         <tRbox>1</tRbox>
+        <tRtrace>0</tRtrace>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
         <nTsel>6</nTsel>
@@ -674,6 +695,10 @@
           <Name>UL2ARM(-U40296420 -O7 -C0 -FO7 -FD40000000 -FC800 -FN1 -FF0LPC_IAP_256 -FS00 -FL01E000)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
+      <Breakpoint/>
+      <Tracepoint>
+        <THDelay>0</THDelay>
+      </Tracepoint>
       <DebugFlag>
         <trace>0</trace>
         <periodic>0</periodic>
@@ -710,6 +735,7 @@
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>1</GroupNumber>
       <FileNumber>1</FileNumber>
@@ -723,6 +749,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\Startup.s</PathWithFileName>
       <FilenameWithoutPath>Startup.s</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -737,6 +765,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\RTX_Config.c</PathWithFileName>
       <FilenameWithoutPath>RTX_Config.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -751,6 +781,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\CAN\inc\CAN_Cfg.h</PathWithFileName>
       <FilenameWithoutPath>CAN_Cfg.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -765,6 +797,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\FS\File_Config.c</PathWithFileName>
       <FilenameWithoutPath>File_Config.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -773,19 +807,22 @@
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>2</GroupNumber>
       <FileNumber>5</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>26</ColumnNumber>
+      <ColumnNumber>1</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>24</TopLine>
-      <CurrentLine>37</CurrentLine>
+      <TopLine>339</TopLine>
+      <CurrentLine>445</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>2</GroupNumber>
@@ -800,6 +837,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\common.c</PathWithFileName>
       <FilenameWithoutPath>common.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -808,6 +847,7 @@
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>3</GroupNumber>
       <FileNumber>7</FileNumber>
@@ -821,6 +861,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\PLIS\upload.c</PathWithFileName>
       <FilenameWithoutPath>upload.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
@@ -835,6 +877,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\PLIS\compress.c</PathWithFileName>
       <FilenameWithoutPath>compress.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
@@ -849,6 +893,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\PLIS\plis1_fw.c</PathWithFileName>
       <FilenameWithoutPath>plis1_fw.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
@@ -863,6 +909,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\PLIS\plis2_fw.c</PathWithFileName>
       <FilenameWithoutPath>plis2_fw.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -871,6 +919,7 @@
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>4</GroupNumber>
       <FileNumber>11</FileNumber>
@@ -884,6 +933,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\CAN\src\CAN_LPC229x_Custom.c</PathWithFileName>
       <FilenameWithoutPath>CAN_LPC229x_Custom.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
@@ -898,6 +949,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\CAN\src\RTX_CAN.c</PathWithFileName>
       <FilenameWithoutPath>RTX_CAN.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>4</GroupNumber>
@@ -912,6 +965,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\CAN\src\RTX_CAN_EX.c</PathWithFileName>
       <FilenameWithoutPath>RTX_CAN_EX.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -920,6 +975,7 @@
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>5</GroupNumber>
       <FileNumber>14</FileNumber>
@@ -933,6 +989,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\clock.c</PathWithFileName>
       <FilenameWithoutPath>clock.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
@@ -947,6 +1005,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\termostat.c</PathWithFileName>
       <FilenameWithoutPath>termostat.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
@@ -961,6 +1021,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\termometer.c</PathWithFileName>
       <FilenameWithoutPath>termometer.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
@@ -975,6 +1037,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\adc.c</PathWithFileName>
       <FilenameWithoutPath>adc.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
@@ -989,6 +1053,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\dac.c</PathWithFileName>
       <FilenameWithoutPath>dac.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
@@ -1003,6 +1069,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\rtc_svc.c</PathWithFileName>
       <FilenameWithoutPath>rtc_svc.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -1011,6 +1079,7 @@
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>6</GroupNumber>
       <FileNumber>20</FileNumber>
@@ -1024,6 +1093,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\PLIS\spi_plis.c</PathWithFileName>
       <FilenameWithoutPath>spi_plis.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>6</GroupNumber>
@@ -1038,6 +1109,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\i2c_mc.c</PathWithFileName>
       <FilenameWithoutPath>i2c_mc.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -1046,6 +1119,7 @@
     <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>7</GroupNumber>
       <FileNumber>22</FileNumber>
@@ -1059,6 +1133,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\FS\SPI_LPC22xx_Custom.c</PathWithFileName>
       <FilenameWithoutPath>SPI_LPC22xx_Custom.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>7</GroupNumber>
@@ -1073,6 +1149,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\FS\FS_SPI_FlashPrg.c</PathWithFileName>
       <FilenameWithoutPath>FS_SPI_FlashPrg.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>7</GroupNumber>
@@ -1087,6 +1165,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\FS\Retarget.c</PathWithFileName>
       <FilenameWithoutPath>Retarget.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -1095,6 +1175,7 @@
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>8</GroupNumber>
       <FileNumber>25</FileNumber>
@@ -1108,60 +1189,9 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\Lib\FS_ARM_L.lib</PathWithFileName>
       <FilenameWithoutPath>FS_ARM_L.lib</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
-
-  <MDIGroups>
-    <Orientation>1</Orientation>
-    <ActiveMDIGroup>0</ActiveMDIGroup>
-    <MDIGroup>
-      <Size>100</Size>
-      <ActiveTab>0</ActiveTab>
-      <Documents>
-        <Doc>
-          <Name>.\main.c</Name>
-          <ColumnNumber>26</ColumnNumber>
-          <TopLine>24</TopLine>
-          <CurrentLine>37</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>\\DK\work\OLO\SOLO2_FW\SOLO2_FLIGHT_V2_1\RTX\structs.h</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>75</TopLine>
-          <CurrentLine>89</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>\\DK\work\OLO\SOLO2_FW\SOLO2_EMU3\RTX\structs.h</Name>
-          <ColumnNumber>10</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>19</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>\\DK\work\OLO\SOLO2_FW\SOLO2_FLIGHT_V2_1\RTX\cmos.h</Name>
-          <ColumnNumber>24</ColumnNumber>
-          <TopLine>56</TopLine>
-          <CurrentLine>70</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>\\DK\work\OLO\SOLO2_FW\SOLO2_FLIGHT_V2_1\RTX\regs.h</Name>
-          <ColumnNumber>57</ColumnNumber>
-          <TopLine>4</TopLine>
-          <CurrentLine>17</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\rtc_svc.c</Name>
-          <ColumnNumber>23</ColumnNumber>
-          <TopLine>70</TopLine>
-          <CurrentLine>93</CurrentLine>
-        </Doc>
-        <Doc>
-          <Name>.\CAN\src\CAN_LPC229x_Custom.c</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>410</TopLine>
-          <CurrentLine>410</CurrentLine>
-        </Doc>
-      </Documents>
-    </MDIGroup>
-  </MDIGroups>
 
 </ProjectOpt>
