@@ -1,49 +1,23 @@
 Dependencies for Project 'FLIGHT_V2_1', Target 'SOLO2 Universal (Right default)': (DO NOT MODIFY !)
-<<<<<<< HEAD
-F (.\Startup.s)(0x4E9C2714)(--cpu ARM7TDMI --pd "__RTX SETA 1" -g --16 --apcs=interwork -I.\FS\inc -I.\FS\inc\interfaces -I.\CAN\inc-I d:\Keil_v473\ARM\RV31\INC-I d:\Keil_v473\ARM\CMSIS\Include-I d:\Keil_v473\ARM\Inc\Philips--list .\lst\startup.lst --xref -o .\obj\startup.o --depend .\obj\startup.d)
-F (.\RTX_Config.c)(0x50BF36CE)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I d:\Keil_v473\ARM\RV31\INC-I d:\Keil_v473\ARM\CMSIS\Include-I d:\Keil_v473\ARM\Inc\Philips-o .\obj\rtx_config.o --omf_browse .\obj\rtx_config.crf --depend .\obj\rtx_config.d)
-F (.\CAN\inc\CAN_Cfg.h)(0x4D344D80)()
-F (.\FS\File_Config.c)(0x4E36A17C)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\file_config.o" --omf_browse ".\obj\file_config.crf" --depend ".\obj\file_config.d")
-F (.\main.c)(0x5D70D668)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\main.o" --omf_browse ".\obj\main.crf" --depend ".\obj\main.d")
-F (.\common.c)(0x4E929F10)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\common.o" --omf_browse ".\obj\common.crf" --depend ".\obj\common.d")
-F (.\PLIS\upload.c)(0x4E89F484)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\upload.o" --omf_browse ".\obj\upload.crf" --depend ".\obj\upload.d")
-F (.\PLIS\compress.c)(0x45BDC99E)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\compress.o" --omf_browse ".\obj\compress.crf" --depend ".\obj\compress.d")
-F (.\PLIS\plis1_fw.c)(0x595B4449)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\plis1_fw.o" --omf_browse ".\obj\plis1_fw.crf" --depend ".\obj\plis1_fw.d")
-F (.\PLIS\plis2_fw.c)(0x595B444A)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\plis2_fw.o" --omf_browse ".\obj\plis2_fw.crf" --depend ".\obj\plis2_fw.d")
-F (.\CAN\src\CAN_LPC229x_Custom.c)(0x50BF383C)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\can_lpc229x_custom.o" --omf_browse ".\obj\can_lpc229x_custom.crf" --depend ".\obj\can_lpc229x_custom.d")
-F (.\CAN\src\RTX_CAN.c)(0x4EDF1E22)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\rtx_can.o" --omf_browse ".\obj\rtx_can.crf" --depend ".\obj\rtx_can.d")
-F (.\CAN\src\RTX_CAN_EX.c)(0x50BCE6F2)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\rtx_can_ex.o" --omf_browse ".\obj\rtx_can_ex.crf" --depend ".\obj\rtx_can_ex.d")
-F (.\clock.c)(0x4DEC8836)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\clock.o" --omf_browse ".\obj\clock.crf" --depend ".\obj\clock.d")
-F (.\termostat.c)(0x4D46B31A)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\termostat.o" --omf_browse ".\obj\termostat.crf" --depend ".\obj\termostat.d")
-F (.\termometer.c)(0x50B608B2)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\termometer.o" --omf_browse ".\obj\termometer.crf" --depend ".\obj\termometer.d")
-F (.\adc.c)(0x4D4933F4)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\adc.o" --omf_browse ".\obj\adc.crf" --depend ".\obj\adc.d")
-F (.\dac.c)(0x4CE3A2D8)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\dac.o" --omf_browse ".\obj\dac.crf" --depend ".\obj\dac.d")
-F (.\rtc_svc.c)(0x4EDCBC38)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\rtc_svc.o" --omf_browse ".\obj\rtc_svc.crf" --depend ".\obj\rtc_svc.d")
-F (.\PLIS\spi_plis.c)(0x4D33FB24)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\spi_plis.o" --omf_browse ".\obj\spi_plis.crf" --depend ".\obj\spi_plis.d")
-F (.\i2c_mc.c)(0x50BF37DE)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\i2c_mc.o" --omf_browse ".\obj\i2c_mc.crf" --depend ".\obj\i2c_mc.d")
-F (.\FS\SPI_LPC22xx_Custom.c)(0x4E393122)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\spi_lpc22xx_custom.o" --omf_browse ".\obj\spi_lpc22xx_custom.crf" --depend ".\obj\spi_lpc22xx_custom.d")
-F (.\FS\FS_SPI_FlashPrg.c)(0x4C0CE324)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\fs_spi_flashprg.o" --omf_browse ".\obj\fs_spi_flashprg.crf" --depend ".\obj\fs_spi_flashprg.d")
-F (.\FS\Retarget.c)(0x4C0CE326)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\retarget.o" --omf_browse ".\obj\retarget.crf" --depend ".\obj\retarget.d")
-=======
 F (.\Startup.s)(0x4E9C2714)(--cpu ARM7TDMI --pd "__RTX SETA 1" -g --16 --apcs=interwork -I.\FS\inc -I.\FS\inc\interfaces -I.\CAN\inc-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips--list .\lst\startup.lst --xref -o .\obj\startup.o --depend .\obj\startup.d)
 F (.\RTX_Config.c)(0x50BF36CE)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\rtx_config.o --omf_browse .\obj\rtx_config.crf --depend .\obj\rtx_config.d)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.h)(0x559D26C8)
-I (C:\Keil_v4\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
-I (C:\Keil_v4\ARM\RV31\INC\RTX_lib.c)(0x559D26C8)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.h)(0x559D26C8)
+I (d:\Keil_v473\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
+I (d:\Keil_v473\ARM\RV31\INC\RTX_lib.c)(0x559D26C8)
 F (.\CAN\inc\CAN_Cfg.h)(0x4D344D80)()
-F (.\FS\File_Config.c)(0x4E36A17C)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\file_config.o --omf_browse .\obj\file_config.crf --depend .\obj\file_config.d)
+F (.\FS\File_Config.c)(0x4E36A17C)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\file_config.o" --omf_browse ".\obj\file_config.crf" --depend ".\obj\file_config.d")
 I (.\FS\File_Config.h)(0x4C0CE322)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.h)(0x559D26C8)
-I (C:\Keil_v4\ARM\ARMCC\include\stdio.h)(0x51C80BA4)
-I (C:\Keil_v4\ARM\ARMCC\include\absacc.h)(0x51C80BA4)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.h)(0x559D26C8)
+I (d:\Keil_v473\ARM\ARMCC\include\stdio.h)(0x51C7FD94)
+I (d:\Keil_v473\ARM\ARMCC\include\absacc.h)(0x51C7FD94)
 I (FS\FS_SPI_FlashDev.h)(0x4D08D35A)
-F (.\main.c)(0x5DB39EBA)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
-I (C:\Keil_v4\ARM\Inc\Philips\LPC22xx.h)(0x559D2158)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.h)(0x559D26C8)
-I (C:\Keil_v4\ARM\ARMCC\include\STDLIB.h)(0x51C80BA4)
-I (C:\Keil_v4\ARM\ARMCC\include\STRING.h)(0x51C80BA4)
-I (C:\Keil_v4\ARM\ARMCC\include\STDIO.h)(0x51C80BA4)
-I (C:\Keil_v4\ARM\ARMCC\include\MATH.h)(0x51C80BA4)
+F (.\main.c)(0x5E1845C0)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\main.o" --omf_browse ".\obj\main.crf" --depend ".\obj\main.d")
+I (d:\Keil_v473\ARM\Inc\Philips\LPC22xx.h)(0x559D2158)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.h)(0x559D26C8)
+I (d:\Keil_v473\ARM\ARMCC\include\STDLIB.h)(0x51C7FD94)
+I (d:\Keil_v473\ARM\ARMCC\include\STRING.h)(0x51C7FD94)
+I (d:\Keil_v473\ARM\ARMCC\include\STDIO.h)(0x51C7FD94)
+I (d:\Keil_v473\ARM\ARMCC\include\MATH.h)(0x51C7FD94)
 I (.\PLIS\upload.h)(0x4E89F102)
 I (.\CAN\inc\RTX_CAN.h)(0x50BF1DB8)
 I (.\CAN\inc\CAN_Cfg.h)(0x4D344D80)
@@ -58,95 +32,94 @@ I (rtc_svc.h)(0x4E89E86A)
 I (structs.h)(0x4F910FCA)
 I (rect.h)(0x4E831038)
 I (common.h)(0x4C9D13FC)
-I (ver.h)(0x5DB39F6E)
+I (ver.h)(0x5E18471C)
 I (flash.h)(0x5C516BED)
-F (.\common.c)(0x4E929F10)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\common.o --omf_browse .\obj\common.crf --depend .\obj\common.d)
-I (C:\Keil_v4\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.H)(0x559D26C8)
+F (.\common.c)(0x4E929F10)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\common.o" --omf_browse ".\obj\common.crf" --depend ".\obj\common.d")
+I (d:\Keil_v473\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.H)(0x559D26C8)
 I (common.h)(0x4C9D13FC)
-F (.\PLIS\upload.c)(0x4E89F484)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\upload.o --omf_browse .\obj\upload.crf --depend .\obj\upload.d)
-I (C:\Keil_v4\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.h)(0x559D26C8)
+F (.\PLIS\upload.c)(0x4E89F484)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\upload.o" --omf_browse ".\obj\upload.crf" --depend ".\obj\upload.d")
+I (d:\Keil_v473\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.h)(0x559D26C8)
 I (PLIS\upload.h)(0x4E89F102)
 I (PLIS\spi_plis.h)(0x4D33FB34)
 I (PLIS\compress.h)(0x45BDC982)
 I (PLIS\plis_fw.h)(0x45BDE3B0)
-F (.\PLIS\compress.c)(0x45BDC99E)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\compress.o --omf_browse .\obj\compress.crf --depend .\obj\compress.d)
-I (C:\Keil_v4\ARM\ARMCC\include\setjmp.h)(0x51C80BA4)
+F (.\PLIS\compress.c)(0x45BDC99E)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\compress.o" --omf_browse ".\obj\compress.crf" --depend ".\obj\compress.d")
+I (d:\Keil_v473\ARM\ARMCC\include\setjmp.h)(0x51C7FD94)
 I (PLIS\compress.h)(0x45BDC982)
-F (.\PLIS\plis1_fw.c)(0x595B4449)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\plis1_fw.o --omf_browse .\obj\plis1_fw.crf --depend .\obj\plis1_fw.d)
-F (.\PLIS\plis2_fw.c)(0x595B444A)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\plis2_fw.o --omf_browse .\obj\plis2_fw.crf --depend .\obj\plis2_fw.d)
-F (.\CAN\src\CAN_LPC229x_Custom.c)(0x50BF383C)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\can_lpc229x_custom.o --omf_browse .\obj\can_lpc229x_custom.crf --depend .\obj\can_lpc229x_custom.d)
-I (C:\Keil_v4\ARM\Inc\Philips\LPC22xx.h)(0x559D2158)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.h)(0x559D26C8)
+F (.\PLIS\plis1_fw.c)(0x595B4449)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\plis1_fw.o" --omf_browse ".\obj\plis1_fw.crf" --depend ".\obj\plis1_fw.d")
+F (.\PLIS\plis2_fw.c)(0x595B444A)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\plis2_fw.o" --omf_browse ".\obj\plis2_fw.crf" --depend ".\obj\plis2_fw.d")
+F (.\CAN\src\CAN_LPC229x_Custom.c)(0x50BF383C)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\can_lpc229x_custom.o" --omf_browse ".\obj\can_lpc229x_custom.crf" --depend ".\obj\can_lpc229x_custom.d")
+I (d:\Keil_v473\ARM\Inc\Philips\LPC22xx.h)(0x559D2158)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.h)(0x559D26C8)
 I (.\CAN\inc\RTX_CAN.h)(0x50BF1DB8)
 I (.\CAN\inc\CAN_Cfg.h)(0x4D344D80)
 I (.\CAN\inc\CAN_reg.h)(0x4B86593E)
-F (.\CAN\src\RTX_CAN.c)(0x4EDF1E22)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\rtx_can.o --omf_browse .\obj\rtx_can.crf --depend .\obj\rtx_can.d)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.h)(0x559D26C8)
+F (.\CAN\src\RTX_CAN.c)(0x4EDF1E22)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\rtx_can.o" --omf_browse ".\obj\rtx_can.crf" --depend ".\obj\rtx_can.d")
+I (d:\Keil_v473\ARM\RV31\INC\RTL.h)(0x559D26C8)
 I (.\CAN\inc\RTX_CAN.h)(0x50BF1DB8)
 I (.\CAN\inc\CAN_Cfg.h)(0x4D344D80)
-F (.\CAN\src\RTX_CAN_EX.c)(0x50BCE6F2)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\rtx_can_ex.o --omf_browse .\obj\rtx_can_ex.crf --depend .\obj\rtx_can_ex.d)
-I (C:\Keil_v4\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.h)(0x559D26C8)
-I (C:\Keil_v4\ARM\ARMCC\include\STRING.h)(0x51C80BA4)
+F (.\CAN\src\RTX_CAN_EX.c)(0x50BCE6F2)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\rtx_can_ex.o" --omf_browse ".\obj\rtx_can_ex.crf" --depend ".\obj\rtx_can_ex.d")
+I (d:\Keil_v473\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.h)(0x559D26C8)
+I (d:\Keil_v473\ARM\ARMCC\include\STRING.h)(0x51C7FD94)
 I (.\CAN\inc\CAN_Cfg.h)(0x4D344D80)
 I (.\CAN\inc\RTX_CAN.h)(0x50BF1DB8)
 I (.\CAN\inc\CAN_EX.h)(0x50BCE6F2)
-F (.\clock.c)(0x4DEC8836)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\clock.o --omf_browse .\obj\clock.crf --depend .\obj\clock.d)
-I (C:\Keil_v4\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.H)(0x559D26C8)
-I (C:\Keil_v4\ARM\ARMCC\include\STRING.H)(0x51C80BA4)
+F (.\clock.c)(0x4DEC8836)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\clock.o" --omf_browse ".\obj\clock.crf" --depend ".\obj\clock.d")
+I (d:\Keil_v473\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.H)(0x559D26C8)
+I (d:\Keil_v473\ARM\ARMCC\include\STRING.H)(0x51C7FD94)
 I (clock.h)(0x4CE38AA8)
 I (i2c_mc.h)(0x50B5CA8E)
-F (.\termostat.c)(0x4D46B31A)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\termostat.o --omf_browse .\obj\termostat.crf --depend .\obj\termostat.d)
-I (C:\Keil_v4\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.h)(0x559D26C8)
+F (.\termostat.c)(0x4D46B31A)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\termostat.o" --omf_browse ".\obj\termostat.crf" --depend ".\obj\termostat.d")
+I (d:\Keil_v473\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.h)(0x559D26C8)
 I (termostat.h)(0x4D46B31A)
 I (adc.h)(0x4D343442)
-F (.\termometer.c)(0x50B608B2)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\termometer.o --omf_browse .\obj\termometer.crf --depend .\obj\termometer.d)
-I (C:\Keil_v4\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.H)(0x559D26C8)
+F (.\termometer.c)(0x50B608B2)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\termometer.o" --omf_browse ".\obj\termometer.crf" --depend ".\obj\termometer.d")
+I (d:\Keil_v473\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.H)(0x559D26C8)
 I (termometer.h)(0x50B608B2)
 I (i2c_mc.h)(0x50B5CA8E)
-F (.\adc.c)(0x4D4933F4)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\adc.o --omf_browse .\obj\adc.crf --depend .\obj\adc.d)
-I (C:\Keil_v4\ARM\Inc\Philips\LPC22XX.H)(0x559D2158)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.H)(0x559D26C8)
+F (.\adc.c)(0x4D4933F4)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\adc.o" --omf_browse ".\obj\adc.crf" --depend ".\obj\adc.d")
+I (d:\Keil_v473\ARM\Inc\Philips\LPC22XX.H)(0x559D2158)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.H)(0x559D26C8)
 I (adc.h)(0x4D343442)
 I (common.h)(0x4C9D13FC)
-F (.\dac.c)(0x4CE3A2D8)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\dac.o --omf_browse .\obj\dac.crf --depend .\obj\dac.d)
-I (C:\Keil_v4\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.H)(0x559D26C8)
-I (C:\Keil_v4\ARM\ARMCC\include\STRING.H)(0x51C80BA4)
+F (.\dac.c)(0x4CE3A2D8)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\dac.o" --omf_browse ".\obj\dac.crf" --depend ".\obj\dac.d")
+I (d:\Keil_v473\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.H)(0x559D26C8)
+I (d:\Keil_v473\ARM\ARMCC\include\STRING.H)(0x51C7FD94)
 I (DAC.h)(0x4CE3A1BE)
 I (i2c_mc.h)(0x50B5CA8E)
-F (.\rtc_svc.c)(0x4EDCBC38)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\rtc_svc.o --omf_browse .\obj\rtc_svc.crf --depend .\obj\rtc_svc.d)
-I (C:\Keil_v4\ARM\Inc\Philips\LPC214X.H)(0x559D2158)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.H)(0x559D26C8)
+F (.\rtc_svc.c)(0x4EDCBC38)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\rtc_svc.o" --omf_browse ".\obj\rtc_svc.crf" --depend ".\obj\rtc_svc.d")
+I (d:\Keil_v473\ARM\Inc\Philips\LPC214X.H)(0x559D2158)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.H)(0x559D26C8)
 I (rtc_svc.h)(0x4E89E86A)
 I (common.h)(0x4C9D13FC)
-F (.\PLIS\spi_plis.c)(0x4D33FB24)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\spi_plis.o --omf_browse .\obj\spi_plis.crf --depend .\obj\spi_plis.d)
-I (C:\Keil_v4\ARM\Inc\Philips\LPC22XX.H)(0x559D2158)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.h)(0x559D26C8)
+F (.\PLIS\spi_plis.c)(0x4D33FB24)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\spi_plis.o" --omf_browse ".\obj\spi_plis.crf" --depend ".\obj\spi_plis.d")
+I (d:\Keil_v473\ARM\Inc\Philips\LPC22XX.H)(0x559D2158)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.h)(0x559D26C8)
 I (PLIS\spi_plis.h)(0x4D33FB34)
-F (.\i2c_mc.c)(0x50BF37DE)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\i2c_mc.o --omf_browse .\obj\i2c_mc.crf --depend .\obj\i2c_mc.d)
-I (C:\Keil_v4\ARM\Inc\Philips\LPC22xx.h)(0x559D2158)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.H)(0x559D26C8)
-I (C:\Keil_v4\ARM\ARMCC\include\string.h)(0x51C80BA4)
+F (.\i2c_mc.c)(0x50BF37DE)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\i2c_mc.o" --omf_browse ".\obj\i2c_mc.crf" --depend ".\obj\i2c_mc.d")
+I (d:\Keil_v473\ARM\Inc\Philips\LPC22xx.h)(0x559D2158)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.H)(0x559D26C8)
+I (d:\Keil_v473\ARM\ARMCC\include\string.h)(0x51C7FD94)
 I (i2c_mc.h)(0x50B5CA8E)
-F (.\FS\SPI_LPC22xx_Custom.c)(0x4E393122)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\spi_lpc22xx_custom.o --omf_browse .\obj\spi_lpc22xx_custom.crf --depend .\obj\spi_lpc22xx_custom.d)
+F (.\FS\SPI_LPC22xx_Custom.c)(0x4E393122)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\spi_lpc22xx_custom.o" --omf_browse ".\obj\spi_lpc22xx_custom.crf" --depend ".\obj\spi_lpc22xx_custom.d")
 I (.\FS\File_Config.h)(0x4C0CE322)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.h)(0x559D26C8)
-I (C:\Keil_v4\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
-F (.\FS\FS_SPI_FlashPrg.c)(0x4C0CE324)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\fs_spi_flashprg.o --omf_browse .\obj\fs_spi_flashprg.crf --depend .\obj\fs_spi_flashprg.d)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.h)(0x559D26C8)
+I (d:\Keil_v473\ARM\Inc\Philips\LPC22xx.H)(0x559D2158)
+F (.\FS\FS_SPI_FlashPrg.c)(0x4C0CE324)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\fs_spi_flashprg.o" --omf_browse ".\obj\fs_spi_flashprg.crf" --depend ".\obj\fs_spi_flashprg.d")
 I (.\FS\File_Config.h)(0x4C0CE322)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.h)(0x559D26C8)
-F (.\FS\Retarget.c)(0x4C0CE326)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS-I C:\Keil_v4\ARM\RV31\INC-I C:\Keil_v4\ARM\CMSIS\Include-I C:\Keil_v4\ARM\Inc\Philips-o .\obj\retarget.o --omf_browse .\obj\retarget.crf --depend .\obj\retarget.d)
-I (C:\Keil_v4\ARM\ARMCC\include\stdio.h)(0x51C80BA4)
-I (C:\Keil_v4\ARM\ARMCC\include\string.h)(0x51C80BA4)
-I (C:\Keil_v4\ARM\ARMCC\include\rt_misc.h)(0x51C80BA4)
-I (C:\Keil_v4\ARM\ARMCC\include\rt_sys.h)(0x51C80BA4)
+I (d:\Keil_v473\ARM\RV31\INC\RTL.h)(0x559D26C8)
+F (.\FS\Retarget.c)(0x4C0CE326)(-c --cpu ARM7TDMI -D__RTX -g -O2 -Otime --apcs=interwork -I.\CAN\inc -I.\PLIS -I.\FS -I "d:\Keil421\ARM\CMSIS\Include" -I "d:\Keil421\ARM\INC\Philips" -o ".\obj\retarget.o" --omf_browse ".\obj\retarget.crf" --depend ".\obj\retarget.d")
+I (d:\Keil_v473\ARM\ARMCC\include\stdio.h)(0x51C7FD94)
+I (d:\Keil_v473\ARM\ARMCC\include\string.h)(0x51C7FD94)
+I (d:\Keil_v473\ARM\ARMCC\include\rt_misc.h)(0x51C7FD94)
+I (d:\Keil_v473\ARM\ARMCC\include\rt_sys.h)(0x51C7FD94)
 I (.\FS\File_Config.h)(0x4C0CE322)
-I (C:\Keil_v4\ARM\RV31\INC\RTL.h)(0x559D26C8)
->>>>>>> 2bf16fbeffaec0808c732e7269511b4bc61ad1e5
+I (d:\Keil_v473\ARM\RV31\INC\RTL.h)(0x559D26C8)
 F (.\Lib\FS_ARM_L.lib)(0x4C0CD510)()
